@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign up</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+            body{
+                margin-top : 20px;
+                background-image: url(images/resume\ login\ pic.jpg);
+                background-repeat:repeat-y;
+                background-color: rgb(5, 1, 84);
+            }
+           
+        </style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link rel="icon" href="logor.jpeg">
+    </head>
+    <body>
+        <div class="container">
+            <div class="card" style="width :500px;margin-left : 850px; background-color: rgb(190, 211, 254);"  >
+                    <form>
+                        <div class="card-header">
+                            <div class="justify-content-center">
+                                <img class="mb-8" src="logor.jpeg" alt="" height="150px" style="margin-left : 170px">
+                                <h3 style="font-weight: bold; text-align: center;"> Sign-in</h3>
+                            
+                            <div>
+                        </div>
+                       <div class="card-body">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingName" placeholder="" required>
+                            <label for="floatingInput" style="opacity: 70%;"><i class="bi bi-people-fill"></i> Name</label>
+                        </div>
+                        <br>
+                        <div class="form-floating">
+                            <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" required>
+                            <label for="floatingInput" style="opacity: 70%;"><i class="bi bi-envelope"></i> Email address</label>
+                        </div>
+                        <br>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required >
+                            <label for="floatingPassword" style="opacity: 70%;"><i class="bi bi-key"></i> Password</label>
+                        </div>
+                        <br>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" id="floatingConfirmPassword" placeholder="Confirm your Password" required>
+                            <label for="floatingConfirmPassword" style="opacity: 70%;"><i class="bi bi-key"></i> Confirm Password</label>
+                        </div>
+                        <br>
+                        <div class="mb-3">
+                            <label class="form-check" for="male" style="font-weight: bold;"> Gender</label>
+                            <div class="form-check form-click-inline" >
+                                <input type="radio" class="form-check-input"  name="gender" id="male" required>
+                                <label class="form-check-label" for="male">Male</label>
+                            </div>
+                            <div class="form-check form-click-inline" >
+                                <input type="radio" class="form-check-input"  name="gender" id="female"required >
+                                <label class="form-check-label" for="female">Female</label>
+                            </div>
+                        </div>
+            
+                        <div class="mb-3">
+                            <input type="checkbox" class="form-check-input" id="terms_and_conditions" >
+                            <label class="form-check-label" for="terms_and_conditions">I agree all the terms and conditions<a href="#"> RESUME.inc</a></label>
+                   
+                        </div>
+            
+                        <div>
+                            <a href="login.html" class="btn btn-success w-50" type="submit"><i class="bi bi-person-plus-fill"></i> Sign In
+                            </a>
+                        </div>
+                    </form>
+                </div>
+        </div>
+        
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>
