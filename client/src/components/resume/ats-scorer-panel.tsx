@@ -48,12 +48,12 @@ export function AtsScorerPanel({
 
     setIsAnalyzing(true);
     try {
-      // Simulate API delay for analysis
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
+      // Perform local analysis first to get feedback
       const analysis = AtsScorer.analyzeResume(content);
       setFeedback(analysis);
       setShowDetails(true);
+      
+      // Pass analysis to parent to handle server API call
       onAnalyze(analysis);
     } catch (error) {
       console.error('ATS Analysis failed:', error);
