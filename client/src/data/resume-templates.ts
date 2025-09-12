@@ -314,6 +314,127 @@ export const resumeTemplates: ResumeTemplate[] = [
     },
     features: ["Startup energy", "Growth mindset", "Innovation ready"],
   },
+  {
+    id: "creative-photographer",
+    name: "Creative Photographer",
+    description: "Visual-focused template for photographers and visual artists",
+    category: "creative",
+    experienceLevel: ["beginner", "mid-career"],
+    rating: 4.8,
+    preview: "bg-gradient-to-br from-amber-50 to-yellow-100",
+    colors: {
+      primary: "hsl(45, 93%, 47%)",
+      secondary: "hsl(45, 25%, 35%)",
+      accent: "hsl(45, 100%, 97%)"
+    },
+    features: ["Portfolio showcase", "Visual hierarchy", "Creative layout"],
+  },
+  {
+    id: "creative-marketer",
+    name: "Creative Marketing",
+    description: "Marketing-focused template with creative flair",
+    category: "creative",
+    experienceLevel: ["beginner", "mid-career"],
+    rating: 4.7,
+    preview: "bg-gradient-to-br from-violet-50 to-indigo-100",
+    colors: {
+      primary: "hsl(243, 75%, 59%)",
+      secondary: "hsl(243, 25%, 35%)",
+      accent: "hsl(243, 100%, 97%)"
+    },
+    features: ["Campaign highlights", "Metrics focus", "Brand storytelling"],
+  },
+  {
+    id: "creative-content",
+    name: "Content Creator",
+    description: "Perfect for content creators and social media professionals",
+    category: "creative",
+    experienceLevel: ["beginner", "mid-career"],
+    rating: 4.6,
+    preview: "bg-gradient-to-br from-emerald-50 to-teal-100",
+    colors: {
+      primary: "hsl(158, 64%, 52%)",
+      secondary: "hsl(158, 25%, 35%)",
+      accent: "hsl(158, 100%, 97%)"
+    },
+    features: ["Content portfolio", "Engagement metrics", "Multi-platform"],
+  },
+  {
+    id: "modern-data",
+    name: "Modern Data Science",
+    description: "Data-driven template for data scientists and analysts",
+    category: "modern",
+    experienceLevel: ["mid-career", "professional"],
+    rating: 4.9,
+    preview: "bg-gradient-to-br from-blue-50 to-cyan-100",
+    colors: {
+      primary: "hsl(195, 100%, 42%)",
+      secondary: "hsl(195, 25%, 35%)",
+      accent: "hsl(195, 100%, 97%)"
+    },
+    features: ["Data visualization", "Analytics focus", "Technical skills"],
+    popular: true,
+  },
+  {
+    id: "modern-product",
+    name: "Modern Product Manager",
+    description: "Product management template highlighting user impact",
+    category: "modern",
+    experienceLevel: ["mid-career", "professional"],
+    rating: 4.8,
+    preview: "bg-gradient-to-br from-purple-50 to-pink-100",
+    colors: {
+      primary: "hsl(320, 65%, 52%)",
+      secondary: "hsl(320, 25%, 35%)",
+      accent: "hsl(320, 100%, 97%)"
+    },
+    features: ["Product metrics", "User experience", "Growth results"],
+  },
+  {
+    id: "modern-freelancer",
+    name: "Modern Freelancer",
+    description: "Flexible template for freelancers and consultants",
+    category: "modern",
+    experienceLevel: ["beginner", "mid-career"],
+    rating: 4.7,
+    preview: "bg-gradient-to-br from-red-50 to-orange-100",
+    colors: {
+      primary: "hsl(14, 100%, 57%)",
+      secondary: "hsl(14, 25%, 35%)",
+      accent: "hsl(14, 100%, 97%)"
+    },
+    features: ["Client results", "Flexible sections", "Project showcase"],
+  },
+  {
+    id: "professional-healthcare",
+    name: "Healthcare Professional",
+    description: "Medical and healthcare professional template",
+    category: "professional",
+    experienceLevel: ["mid-career", "professional"],
+    rating: 4.9,
+    preview: "bg-gradient-to-br from-green-50 to-emerald-100",
+    colors: {
+      primary: "hsl(142, 71%, 45%)",
+      secondary: "hsl(142, 25%, 35%)",
+      accent: "hsl(142, 76%, 96%)"
+    },
+    features: ["Medical credentials", "Patient focus", "Healthcare excellence"],
+  },
+  {
+    id: "professional-education",
+    name: "Education Professional",
+    description: "Template for educators and academic professionals",
+    category: "professional",
+    experienceLevel: ["beginner", "mid-career"],
+    rating: 4.8,
+    preview: "bg-gradient-to-br from-indigo-50 to-blue-100",
+    colors: {
+      primary: "hsl(220, 91%, 62%)",
+      secondary: "hsl(220, 25%, 35%)",
+      accent: "hsl(220, 100%, 97%)"
+    },
+    features: ["Teaching excellence", "Student outcomes", "Academic achievements"],
+  },
 ];
 
 export const getTemplatesByExperienceLevel = (level: ExperienceLevel): ResumeTemplate[] => {
