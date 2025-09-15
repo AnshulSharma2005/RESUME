@@ -72,13 +72,35 @@ export default function ResumeBuilder({ resumeId }: ResumeBuilderProps) {
   });
 
   // Initialize content when resume loads
-  useEffect(() => {
-    if (resume) {
-      setCurrentContent(resume.content);
-      setSelectedTemplateId(resume.templateId);
-      setResumeTitle(resume.title);
-    }
-  }, [resume]);
+ // Initialize content when resume loads
+useEffect(() => {
+  if (resume) {
+    const safeContent: ResumeContent = (resume.content as ResumeContent) ?? {
+      personalInfo: {
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        location: "",
+        website: "",
+        linkedin: "",
+        github: "",
+      },
+      summary: "",
+      experience: [],
+      education: [],
+      skills: [],
+      projects: [],
+      certifications: [],
+      languages: [],
+    };
+
+    setCurrentContent(safeContent);
+    if (resume.templateId) setSelectedTemplateId(resume.templateId);
+    if (resume.title) setResumeTitle(resume.title);
+  }
+}, [resume]);
+
 
   // Save resume mutation
   const saveResumeMutation = useMutation({
@@ -341,7 +363,7 @@ export default function ResumeBuilder({ resumeId }: ResumeBuilderProps) {
                 content={currentContent}
                 templateId={selectedTemplateId}
                 title={resumeTitle}
-                atsScore={resume?.atsScore}
+                atsScore={resume?.atsScore??undefined}
                 isExporting={isExporting}
                 onExport={handleExportPDF}
               />
@@ -355,7 +377,7 @@ export default function ResumeBuilder({ resumeId }: ResumeBuilderProps) {
             content={currentContent}
             templateId={selectedTemplateId}
             title={resumeTitle}
-            atsScore={resume?.atsScore}
+            atsScore={resume?.atsScore??undefined}
             isExporting={isExporting}
             onExport={handleExportPDF}
           />

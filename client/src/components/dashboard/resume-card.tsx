@@ -34,33 +34,33 @@ export function ResumeCard({ resume, viewMode, onEdit, onDelete, onDuplicate }: 
   const [isActionsOpen, setIsActionsOpen] = useState(false);
   const template = getTemplate(resume.templateId);
 
-  const getAtsScoreColor = (score?: number) => {
-    if (!score) return "text-gray-400";
+  // Accept number | null | undefined
+  const getAtsScoreColor = (score?: number | null) => {
+    if (score == null) return "text-gray-400";
     if (score >= 80) return "text-green-600 dark:text-green-400";
     if (score >= 60) return "text-yellow-600 dark:text-yellow-400";
     return "text-red-600 dark:text-red-400";
   };
 
-  const getAtsScoreLabel = (score?: number) => {
-    if (!score) return "Not scored";
+  const getAtsScoreLabel = (score?: number | null) => {
+    if (score == null) return "Not scored";
     if (score >= 80) return "Excellent";
     if (score >= 60) return "Good";
     return "Needs Work";
   };
 
-  const formatDate = (date: Date | string | undefined) => {
+  // Accept Date | string | null | undefined
+  const formatDate = (date: Date | string | null | undefined) => {
     if (!date) return "Never";
     return new Date(date).toLocaleDateString();
   };
 
   const handleExport = async () => {
-    // Implementation would export the resume as PDF
     console.log("Export resume:", resume.id);
     setIsActionsOpen(false);
   };
 
   const handlePreview = () => {
-    // Implementation would open preview modal
     console.log("Preview resume:", resume.id);
     setIsActionsOpen(false);
   };
@@ -91,12 +91,12 @@ export function ResumeCard({ resume, viewMode, onEdit, onDelete, onDuplicate }: 
                 <div className="flex items-center space-x-4 text-sm text-muted-foreground">
                   <span className="flex items-center">
                     <Calendar className="w-4 h-4 mr-1" />
-                    Updated {formatDate(resume.updatedAt || new Date())}
+                    Updated {formatDate(resume.updatedAt)}
                   </span>
                   <span className="flex items-center">
                     <BarChart3 className="w-4 h-4 mr-1" />
-                    <span className={getAtsScoreColor(resume.atsScore || undefined)}>
-                      {resume.atsScore || 0}% ATS
+                    <span className={getAtsScoreColor(resume.atsScore)}>
+                      {resume.atsScore ?? 0}% ATS
                     </span>
                   </span>
                   <span>
@@ -201,7 +201,7 @@ export function ResumeCard({ resume, viewMode, onEdit, onDelete, onDuplicate }: 
         </div>
 
         {/* ATS Score Badge */}
-        {resume.atsScore && (
+        {resume.atsScore != null && (
           <div className="absolute top-2 left-2">
             <Badge 
               className={`${getAtsScoreColor(resume.atsScore)} bg-white/90 border`}
